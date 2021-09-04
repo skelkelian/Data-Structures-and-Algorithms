@@ -1,0 +1,19 @@
+locations = {'North America': {'USA': ['Mountain View']}}
+locations['North America']['USA'].append('Atlanta')
+locations['Asia'] = {'India': ['Bangalore']}
+locations['Asia']['China'] = ['Shanghai']
+locations['Africa'] = {'Egypt': ['Cairo']}
+
+print 1
+sorted_list = sorted(locations['North America']['USA'])
+print(sorted_list[0])
+print(sorted_list[1])
+
+print 2
+sorted_asia_list = []
+for countries, cities in locations['Asia'].iteritems():
+    city_country = cities[0] + " - " + countries 
+    sorted_asia_list.append(city_country)
+sorted_asia_list = sorted(sorted_asia_list)
+for city in sorted_asia_list:
+    print city
